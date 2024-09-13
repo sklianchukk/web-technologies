@@ -2,12 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px;
-    margin-left: 80px;
+    padding: 8%;
+    max-width: 60%;
 }
 
 .hero-text {
-    margin-left: -30px;
 }
 
 .hero h1 {
@@ -31,11 +30,26 @@
     background: #9C69E2;
     color: white;
     border: none;
-    font-size: 14px;
+    font-size: 1.2vw;
+    font-weight: bold;
     cursor: pointer;
 }
 
 .hero-image img {
-    width: 885px;
-    height: 468px;
+    max-width: 200%;
+    padding-top: 10%;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 26px;
+        margin-bottom: 40px;
+    }
+
+    .hero-image img {
+        max-width: 0;
+        max-height: 0;
+    }
 }

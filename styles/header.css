@@ -1,33 +1,52 @@
 header {
-    padding: 20px 40px;
+    padding: 1%;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding: 20px 100px;
+    padding: 2% 5%;
+    max-height: 20px;
 }
 
 .top-logo {
-    width: 49px;
-    height: 35px;
+    width: 4%;
+    height: 4%;
 }
 
 .nav-links {
     display: flex;
-    margin-left: 100px;
+    margin-left: 10%;
     list-style: none;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav-links li {
-    margin-inline: 30px;
+    margin-inline: 15%;
 }
 
 .nav-links li a {
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.1em;
     color: #212353;
+}
+
+.request-demo-top {
+    border-radius: 50vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    width: 14vw;
+    height: 7vh;
+    background-color: white;
+    color: #9C69E2;
+    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+
 }
