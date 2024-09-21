@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lab-web-design</title>
-<!--    <link rel="stylesheet" href="/styles/styles.css">-->
-    <link rel="stylesheet" href="styles/styles.css">
 
+    <link rel="stylesheet" href="styles/styles.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@540&display=swap" rel="stylesheet">
 </head>
@@ -15,22 +14,29 @@
 <header>
     <nav class="navbar">
         <img src="images/logo.png" alt="Data Warehouse Logo" class="top-logo">
+
         <ul class="nav-links">
             <li><a href="index.html">About</a></li>
             <li><a href="#">Help</a></li>
             <li><a href="#">Features</a></li>
             <li><a href="#">Signup</a></li>
         </ul>
-        <button onclick="window.location.href='https://apple.com';" class="btn request-demo-top">Request Demo <span>→</span></button>
-    </nav>
 
+        <a href="https://apple.com" class="btn request-demo-top">Request Demo <span>→</span></a>
+
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
 </header>
 
 <section class="hero">
     <div class="hero-text">
         <h1>Save your data storage here.</h1>
         <p>Data Warehouse is a data storage area that has been tested for security, so you can store your data here safely but not be afraid of being stolen by others.</p>
-        <button class="learn-more-btn">Learn more</button>
+        <a href="#" class="learn-more-btn">Learn more</a>
     </div>
     <div class="hero-image">
         <img src="images/image2girls.png" alt="Two women discussing data storage">
@@ -51,51 +57,49 @@
     </div>
 </section>
 
-<section>
+<div class="features-text">
+    <h2>Features</h2>
+    <p>Some of the features and advantages that we provide for those of you who store data in this Data Warehouse.</p>
+</div>
 
-    <div class="features-text">
-        <h2>Features</h2>
-        <p>Some of the features and advantages that we provide for those of you who store data in this Data Warehouse.</p>
-    </div>
+<section class="image-text-section">
 
-    <div class="image-text-section">
-        <div class="image-container">
-            <img src="images/group1.png" alt="Image 1">
-            <div class="text-overlay">
-                <h3>Search Data</h3>
-                <p>Don’t worry if your data is very large, the Data Warehouse provides a search engine, which is useful for making it easier to find data effectively saving time.</p>
-                <a href="index.html">Learn more →</a>
-            </div>
-        </div>
-        <div class="image-container">
-            <img src="images/group2.png" alt="Image 2">
-            <div class="text-overlay">
-                <h3>24 Hours Access</h3>
-                <p>Access is given 24 hours a full morning to night and meet again in the morning, giving you comfort when you need data when urgent. It is so easy!</p>
-                <a href="#">Learn more →</a>
-            </div>
-        </div>
-        <div class="image-container">
-            <img src="images/group3.png" alt="Image 3">
-            <div class="text-overlay">
-                <h3>Print Out</h3>
-                <p>Print out service gives you convenience if someday you need print data, just edit it all and just print it. Plus, it saves you time by streamlining the process for quick printing whenever you need it.</p>
-                <a href="#">Learn more →</a>
-            </div>
-        </div>
-        <div class="image-container">
-            <img src="images/group4.png" alt="Image 4">
-            <div class="text-overlay">
-                <h3>Security Code</h3>
-                <p>Data Security is one of our best facilities. Allows for your files to be safer. The file can be secured with a code or password that you created, so only you can open the file and no one else .</p>
-                <a href="#">Learn more →</a>
-            </div>
+    <div class="image-text-block">
+        <img src="images/group1.png" alt="Image 1">
+        <div class="text-overlay">
+            <h3>Search Data</h3>
+            <p>Don’t worry if your data is very large, the Data Warehouse provides a search engine, which is useful for making it easier to find data effectively saving time.</p>
+            <a href="index.html">Learn more →</a>
         </div>
     </div>
 
+    <div class="image-text-block">
+        <img src="images/group2.png" alt="Image 2">
+        <div class="text-overlay">
+            <h3>24 Hours Access</h3>
+            <p>Access is given 24 hours a full morning to night and meet again in the morning, giving you comfort when you need data when urgent. It is so easy!</p>
+            <a href="#">Learn more →</a>
+        </div>
+    </div>
+
+    <div class="image-text-block">
+        <img src="images/group3.png" alt="Image 3">
+        <div class="text-overlay">
+            <h3>Print Out</h3>
+            <p>Print out service gives you convenience if someday you need print data, just edit it all and just print it. Plus, it saves you time by streamlining the process for quick printing whenever you need it.</p>
+            <a href="#">Learn more →</a>
+        </div>
+    </div>
+
+    <div class="image-text-block">
+        <img src="images/group4.png" alt="Image 4">
+        <div class="text-overlay">
+            <h3>Security Code</h3>
+            <p>Data Security is one of our best facilities. Allows for your files to be safer. The file can be secured with a code or password that you created, so only you can open the file and no one else.</p>
+            <a href="#">Learn more →</a>
+        </div>
+    </div>
 </section>
-
-
 
 <hr class="hr-element">
 
@@ -107,11 +111,19 @@
     </div>
     <div class="footer-right">
         <div class="buttons-container">
-            <button class="button learn-more" aria-label="Learn more about the product">Learn more</button>
-            <button class="button request-demo-bottom" aria-label="Request a demo of the product">Request Demo <span>→</span></button>
+            <a href="#" class="button learn-more" aria-label="Learn more about the product">Learn more</a>
+            <a href="#" class="button request-demo-bottom" aria-label="Request a demo of the product">Request Demo <span>→</span></a>
         </div>
-        <img src="images/image7.jpg" alt="Chat icon" class="footer-icon">
+        <img src="images/image7.png" alt="Chat icon" class="footer-icon">
     </div>
 </footer>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('nav-active');
+    }
+</script>
+
 </body>
 </html>

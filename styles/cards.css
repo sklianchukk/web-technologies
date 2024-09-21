@@ -1,3 +1,14 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .main-card {
     display: flex;
     align-items: center;
@@ -7,6 +18,7 @@
     max-width: 70%;
     margin: 2% auto;
     background: rgba(240, 99, 184, 0.15);
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 .main-card-image {
@@ -17,6 +29,7 @@
 .main-card-image img {
     width: 100%;
     border-radius: 2%;
+
 }
 
 .main-card-text {
@@ -38,6 +51,7 @@
 }
 
 .hr-element {
+    padding-top: 20px;
     border: 0.2vw;
     color: #9C69E2;
 }
@@ -45,7 +59,6 @@
 .features-text {
     display: flex;
     flex-direction: column;
-    flex: 1;
     justify-content: center;
     align-items: center;
 }
@@ -66,47 +79,191 @@
 
 .image-text-section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
     padding: 4%;
-    justify-items: center;
+    max-width: 1300px; /* Максимальна ширина секції */
+    margin: 0 auto; /* Центрування секції */
+}
+
+.image-text-block {
+    display: grid;
+    grid-template-rows: auto auto; /* Дві строки: одна для зображення, інша для тексту */
     align-items: center;
+    margin-bottom: 15%;
 }
 
-.image-container {
-    position: relative;
-    width: 80%;
-    margin: 4% auto;
-}
-
-.image-container img {
+.image-text-block img {
     width: 100%;
-    border-radius: 2%;
 }
 
 .text-overlay {
-    position: absolute;
-    top: 8%;
-    left: 49%;
-    padding-right: 5%;
-    color: #212353;
-    font-size: 1.15vw;
-    line-height: 1.5;
+    margin-left: 40%;
+    margin-top: -80%;
 }
 
-.text-overlay h2 {
-    font-size: 2vw;
+.text-overlay h3 {
+    font-size: 1.75vw;
     color: #212353;
-    margin-bottom: 2%;
+    margin-bottom: 10%;
 }
 
 .text-overlay p {
-    margin-bottom: 5%;
+    font-size: 1.25vw;
     color: #4B5D68;
+    margin-bottom: 15%;
+    width: 70%; /* Задайте бажану ширину */
+    max-width: 75%;
+    min-width: 25%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text-overlay a {
     text-decoration: none;
     font-weight: bold;
     color: #9C69E2;
+    font-size: 1.1vw;
 }
 
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .main-card {
+        flex-direction: column;
+        padding: 5%;
+        max-width: 90%;
+    }
+
+    .main-card-image {
+        padding-right: 0;
+        margin-bottom: 5%;
+    }
+
+    .main-card-text h2 {
+        font-size: 6vw;
+    }
+
+    .main-card-text p {
+        font-size: 4vw;
+    }
+
+    .features-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .features-text h2 {
+        font-size: 5vw;
+    }
+
+    .features-text p {
+        font-size: 3.5vw;
+        max-width: 90%;
+        padding-bottom: 20px;
+    }
+
+    .image-text-section {
+        grid-template-columns: 1fr; /* Одна колонка */
+        grid-template-rows: repeat(4, auto); /* Чотири рядки */
+    }
+    .text-overlay {
+        margin-left: 35%;
+        margin-top: -85%;
+    }
+
+    .text-overlay h3 {
+        font-size: 5vw;
+        color: #212353;
+    }
+
+    .text-overlay p {
+        font-size: 4vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10%;
+        width: 100%;
+    }
+    .text-overlay a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #9C69E2;
+        font-size: 4vw;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 424px) {
+    .main-card {
+        flex-direction: column;
+        padding: 5%;
+        max-width: 90%;
+    }
+
+    .main-card-image {
+        padding-right: 0;
+        margin-bottom: 5%;
+    }
+
+    .main-card-text h2 {
+        font-size: 6vw;
+    }
+
+    .main-card-text p {
+        font-size: 4vw;
+    }
+
+    .features-text h2 {
+        font-size: 5vw;
+    }
+
+    .features-text p {
+        font-size: 3.5vw;
+        max-width: 90%;
+    }
+
+    .image-text-section {
+        grid-template-columns: 1fr; /* Одна колонка */
+        grid-template-rows: repeat(4, auto); /* Чотири рядки */
+    }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+    .main-card {
+        flex-direction: column;
+        padding: 5%;
+        max-width: 90%;
+    }
+
+    .main-card-image {
+        padding-right: 0;
+        margin-bottom: 5%;
+    }
+
+    .main-card-text h2 {
+        font-size: 6vw;
+    }
+
+    .main-card-text p {
+        font-size: 4vw;
+    }
+
+    .features-text h2 {
+        font-size: 5vw;
+    }
+
+    .features-text p {
+        font-size: 3.5vw;
+        max-width: 90%;
+    }
+
+    .image-text-section {
+        grid-template-columns: 1fr; /* Одна колонка */
+        grid-template-rows: repeat(4, auto); /* Чотири рядки */
+    }
+}
+
+@media (min-width: 769px) {
+    .image-text-section {
+        grid-template-columns: repeat(2, 1fr); /* Дві колонки */
+    }
+}

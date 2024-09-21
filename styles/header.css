@@ -29,11 +29,14 @@ header {
 .nav-links li a {
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.1vw;
     color: #212353;
 }
 
 .request-demo-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50vw;
     font-size: 1.2vw;
     font-weight: bold;
@@ -45,8 +48,60 @@ header {
     color: #9C69E2;
     box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1);
     margin-left: auto;
+    text-decoration: none;
+
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
 
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #333;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        color: white;
+        font-size: 1.5em;
+    }
+
+    .short-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+
+    .request-demo-top {
+        font-size: 3.5vw;
+        width: 35vw;
+        height: 6vh;
+    }
+
+    .top-logo {
+        width: 12%;
+        height: 12%;
+    }
 }

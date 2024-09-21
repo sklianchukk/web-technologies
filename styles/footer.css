@@ -23,7 +23,7 @@
 
 .footer-left small {
     font-size: 0.8vw;
-    color: #212353;
+    color: #9C69E2;
 }
 
 .footer-right {
@@ -33,10 +33,11 @@
 }
 
 .footer-icon {
-    margin-top: 20%;
-    margin-left: 50%;
+    right: 40px;
+    bottom: 20px;
     height: 10%;
-    width: 10%;
+    position: fixed;
+    cursor: pointer;
 }
 
 .buttons-container {
@@ -46,13 +47,16 @@
 }
 
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     height: 3.5vw;
     border-radius: 50vw;
     font-size: 1.2vw;
     font-weight: bold;
     cursor: pointer;
     border: none;
-
 }
 
 .learn-more {
@@ -68,3 +72,65 @@
     box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1);
     margin-left: auto;
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+    .footer-left h2 {
+        font-size: 6vw;
+        color: #2c2c6f;
+    }
+
+    .footer-left p {
+        font-size: 3vw;
+        margin-bottom: 8vw;
+        color: #666;
+    }
+
+    .footer-left small {
+        font-size: 2vw;
+        color: #212353;
+    }
+
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-icon {
+        right: 30px;
+        bottom: 120px;
+        height: 8%;
+        position: fixed;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+    }
+
+    .button {
+        height: 8.5vw;
+        border-radius: 50vw;
+        font-size: 3.2vw;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 5%;
+    }
+
+    .learn-more {
+        width: 30vw;
+        background-color: #F063B8;
+        color: white;
+    }
+
+    .request-demo-bottom {
+        width: 30vw;
+        background-color: white;
+        color: #9C69E2;
+        box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1);
+        margin-left: auto;
+    }
+}
+
