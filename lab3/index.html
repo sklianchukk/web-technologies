@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Cars Website</h1>
+
+    <div class="search-section">
+        <label for="search">Search by Manufacturer: </label>
+        <input type="text" id="search" placeholder="Enter manufacturer">
+        <button id="search-button" onclick="searchCars()">Search</button>
+        <button id="reset-button" onclick="clearSearch()">Reset</button>
+        <button onclick="sortCarsBySpeed()">Sort by Speed</button>
+    </div>
+
+    <div class="buttons">
+
+    </div>
+
+    <div>
+        <h3>Total Horse Power: <span id="totalHorsePower">0</span> HP</h3>
+    </div>
+
+    <div id="carList">
+        <h3>Cars List</h3>
+    </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
