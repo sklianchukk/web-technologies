@@ -9,18 +9,17 @@
 <body>
 
 <div class="container">
-    <h1>Cars Website</h1>
 
     <div class="search-section">
         <label for="search">Search by Manufacturer: </label>
-        <input type="text" id="search" placeholder="Enter manufacturer">
+        <input type="text" id="search" placeholder="Enter manufacturer" min="0">
         <button id="search-button" onclick="searchCars()">Search</button>
         <button id="reset-button" onclick="clearSearch()">Reset</button>
-        <button onclick="sortCarsBySpeed()">Sort by Speed</button>
+        <button onclick="sortCarsByMaxSpeed(); return false" ; >Sort by Speed</button>
     </div>
 
     <div class="buttons">
-
+        <button id="add-car-btn">Add Car</button>
     </div>
 
     <div>
@@ -32,6 +31,36 @@
     </div>
 </div>
 
-<script type="module" src="script.js"></script>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-modal">&times;</span>
+        <h2>Add car</h2>
+        <form id="add-car-form">
+            <label for="car-manufacturer">Manufacturer:</label>
+            <input type="text" id="car-manufacturer" min="0" required >
+            <label for="car-horsePower">Power:</label>
+            <input type="number" id="car-horsePower" min="0" required>
+            <label for="car-maxSpeed">Max speed:</label>
+            <input type="number" id="car-maxSpeed" min="0" required>
+            <button type="submit">Add car</button>
+        </form>
+    </div>
+</div>
+<div id="edit-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-edit-modal">&times;</span>
+        <h2>Edit car</h2>
+        <form id="edit-car-form">
+            <label for="edit-car-manufacturer">Manufacturer:</label>
+            <input type="text" id="edit-car-manufacturer" min="0" required>
+            <label for="edit-car-horsePower">Power:</label>
+            <input type="number" id="edit-car-horsePower" min="0" required>
+            <label for="edit-car-maxSpeed">Max speed:</label>
+            <input type="number" id="edit-car-maxSpeed" min="0" required>
+            <button type="submit">Save changes</button>
+        </form>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
