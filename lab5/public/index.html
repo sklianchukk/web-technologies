@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
+    <title>Cars Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="search-section">
+        <label for="search">Search by Manufacturer: </label>
+        <input type="text" id="search" placeholder="Enter manufacturer" min="0">
+        <button id="search-button">Search</button>
+        <button id="reset-button">Reset</button>
+        <button id="sort-button">Sort by Speed</button>
+    </div>
+
+    <div class="buttons">
+        <button id="add-btn">Add Car</button>
+    </div>
+
+    <div>
+        <h3>Total Horse Power: <span id="totalHorsePower">0</span> HP</h3>
+    </div>
+
+    <div id="carList">
+        <h3>Cars List</h3>
+    </div>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-modal">&times;</span>
+        <h2>Add car</h2>
+        <form id="add-car-form">
+            <label for="car-manufacturer">Manufacturer:</label>
+            <input type="text" id="car-manufacturer" min="0" required >
+            <label for="car-horsepower">Power:</label>
+            <input type="number" id="car-horsepower" min="0" required>
+            <label for="car-maxspeed">Max speed:</label>
+            <input type="number" id="car-maxspeed" min="0" required>
+            <button type="submit">Add car</button>
+        </form>
+    </div>
+</div>
+<div id="edit-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-edit-modal">&times;</span>
+        <h2>Edit car</h2>
+        <form id="edit-car-form">
+            <input type="hidden" id="editId" required>
+            <label for="edit-car-manufacturer">Manufacturer:</label>
+            <input type="text" id="edit-car-manufacturer" min="0" required>
+            <label for="edit-car-horsepower">Power:</label>
+            <input type="number" id="edit-car-horsepower" min="0" required>
+            <label for="edit-car-maxspeed">Max speed:</label>
+            <input type="number" id="edit-car-maxspeed" min="0" required>
+            <button type="submit">Save changes</button>
+        </form>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
