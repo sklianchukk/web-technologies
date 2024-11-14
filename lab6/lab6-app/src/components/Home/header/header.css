@@ -2,9 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    background-color: cornflowerblue;
-    padding-left: 60px;
+    padding:  20px 20px 20px 60px;
+    background-color: #002f34;
 }
 
 .logo {
@@ -31,6 +30,3 @@ nav ul li a {
     font-weight: 500;
 }
 
-nav ul li a:hover {
-    color: #007bff;
-}
