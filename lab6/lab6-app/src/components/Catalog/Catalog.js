@@ -1,55 +1,65 @@
-import React, { useContext, useState } from 'react';
-import { ItemsContext } from '../../context/itemscontext';
+import React, { useState, useEffect } from 'react';
+import { fetchItems } from '../../services/api';
 import CatalogItem from './catalogItem/catalogItem';
 import InputComponent from './inputComponents/inputComponents';
 import SelectComponent from './selectComponent/selectComponent';
 import SortButton from './sort/sort';
 import '../Catalog/Catalog.css';
+import Loader from './../loader/loader';
 
 const Catalog = () => {
-    const { items } = useContext(ItemsContext);
-    const [sortOrder, setSortOrder] = useState('desc');
+    const [items, setItems] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    const [selectedPriceRange, setSelectedPriceRange] = useState('');
+    const [sortOrder, setSortOrder] = useState('desc');
     const [selectedColor, setSelectedColor] = useState('');
+    const [selectedPrice, setSelectedPrice] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [fetchTimeout, setFetchTimeout] = useState(null);
 
-    // Function to parse the selected price range into min and max values
-    const parsePriceRange = (range) => {
-        if (!range) return [null, null];
+    const fetchData = async () => {
+        setLoading(true);
 
-        const [min, max] = range
-            .replace('+', '')  // Remove "+" if it’s there
-            .split('-')        // Split by the hyphen
-            .map(price => parseInt(price.trim(), 10)); // Parse as integers
+        if (fetchTimeout) {
+            clearTimeout(fetchTimeout);
+        }
 
-        return [min, max || Infinity]; // If max is undefined, set to Infinity for upper limit
+        const timeoutId = setTimeout(async () => {
+            try {
+                const response = await fetchItems(searchTerm, sortOrder, selectedColor, selectedPrice);
+                setItems(response.data);
+            } catch (error) {
+                console.error("Error fetching items:", error);
+            }
+            setLoading(false);
+        }, 1000);
+
+        setFetchTimeout(timeoutId);
     };
 
-    // Filtering items based on search, price, and color
+    useEffect(() => {
+        fetchData();
+        return () => {
+            if (fetchTimeout) {
+                clearTimeout(fetchTimeout);
+            }
+        };
+    }, [searchTerm, sortOrder, selectedColor, selectedPrice]);
+
     const filteredItems = items.filter(item => {
         const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase().trim());
-
-        // Parse selected price range
-        const [minPrice, maxPrice] = parsePriceRange(selectedPriceRange);
-
-        // Check if the item's price is within the selected range
-        const matchesPrice = minPrice !== null ? item.price >= minPrice && item.price <= maxPrice : true;
-
         const matchesColor = selectedColor ? item.color === selectedColor : true;
-
+        const matchesPrice = selectedPrice ? item.price <= parseInt(selectedPrice) : true;
         return matchesSearch && matchesPrice && matchesColor;
     });
 
-    // Sorting filtered items
     const sortedItems = filteredItems.sort((a, b) => {
         return sortOrder === 'desc' ? b.price - a.price : a.price - b.price;
     });
 
-    // Handler functions
     const handleSearchChange = (e) => setSearchTerm(e.target.value);
-    const handlePriceChange = (e) => setSelectedPriceRange(e.target.value);
-    const handleColorChange = (e) => setSelectedColor(e.target.value);
     const toggleSortOrder = () => setSortOrder(prevOrder => (prevOrder === 'desc' ? 'asc' : 'desc'));
+    const handleColorChange = (e) => setSelectedColor(e.target.value);
+    const handlePriceChange = (e) => setSelectedPrice(e.target.value);
 
     return (
         <div className="catalog">
@@ -60,19 +70,18 @@ const Catalog = () => {
                     placeholder="Search by name..."
                     className="search-bar"
                 />
-
                 <SortButton sortOrder={sortOrder} toggleSortOrder={toggleSortOrder} />
             </div>
             <div className="selectComponent">
                 <SelectComponent
-                    value={selectedPriceRange}
+                    value={selectedPrice}
                     onChange={handlePriceChange}
                     className="filter-select"
                     options={[
-                        { value: '', label: 'All prices' },
-                        { value: '1 - 999', label: '1 - 999' },
-                        { value: '1000 - 4999', label: '1000 - 4999' },
-                        { value: '+ 5000', label: '5000+' }
+                        { value: '', label: 'Prices up to' },
+                        { value: '1000', label: '1000' },
+                        { value: '5000', label: '5000' },
+                        { value: '12000', label: '12000' }
                     ]}
                 />
             </div>
@@ -89,30 +98,29 @@ const Catalog = () => {
                     ]}
                 />
             </div>
-            <div className="catalog-items">
-                {sortedItems.length > 0 ? (
-                    sortedItems.map((item, index) => (
-                        <CatalogItem
-                            key={item.id}
-                            id={item.id}
-                            name={item.name}
-                            year={item.year}
-                            color={item.color}
-                            price={item.price}
-                            available={item.available}
-                            image={item.image}
-                        />
-                    ))
-                ) : (
-                    <p>Дядько Толік не має зараз, але вже везе тобі таку ластівку!</p>
-                )}
 
-            </div>
-            <>
-                <h1>sdkhjfb</h1>
-                <h1>sdkhjfb</h1>
-                <h1>sdkhjfb</h1>
-            </>
+            {loading ? (
+                <Loader />
+            ) : (
+                <div className="catalog-items">
+                    {sortedItems.length > 0 ? (
+                        sortedItems.map((item) => (
+                            <CatalogItem
+                                key={item.id}
+                                id={item.id}
+                                name={item.name}
+                                year={item.year}
+                                color={item.color}
+                                price={item.price}
+                                available={item.available}
+                                image={item.image}
+                            />
+                        ))
+                    ) : (
+                        <p>Дядько Толік не має зараз, але вже везе тобі таку ластівку!</p>
+                    )}
+                </div>
+            )}
         </div>
     );
 };

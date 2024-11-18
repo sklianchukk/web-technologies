@@ -19,10 +19,3 @@ const CatalogItem = ({ id, name, year, available, price, color,  image }) => {
 };
 
 export default CatalogItem;
-
-
-<>
-    <h1>sdkhjfb</h1>
-    <h1>sdkhjfb</h1>
-    <h1>sdkhjfb</h1>
-</>

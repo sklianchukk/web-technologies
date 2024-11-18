@@ -1,27 +1,4 @@
 import React, { createContext, useState } from 'react';
-import Passat from "./images/passatb2.jpg";
-import Polo from './images/polo.jpg'
-import Alien from './images/alien.jpg'
-import BigFoot from './images/bigfoot.jpg'
-import Junk from './images/junk.jpg'
-import Tesla from './images/tesla.jpg'
-import Supra from './images/supra.jpg'
-import Civic from './images/civic.jpg'
-import M3 from './images/e30.jpeg'
-import GWagon from './images/gclass.jpg'
-import Camaro from './images/camaro.jpg'
-import Mustang from './images/gt5.jfif'
-import Skyline from './images/r34.jpg'
-import Carrera from './images/930.jpg'
-import RX7 from './images/rx7.jpeg'
-import WRX from './images/wrx.jpg'
-import Charger from './images/charger.jpg'
-import XType from './images/xtype.jfif'
-import Miata from './images/miata.jfif'
-import Genesis from './images/hyundai.jfif'
-import disiel from './images/disiel.jpg'
-
-
 
 export const ItemsContext = createContext();
 
@@ -30,192 +7,193 @@ export const ItemsProvider = ({ children }) => {
         {
             id: 1,
             name: 'Volkswagen Passat B8',
-            color: "dark",
+            color: 'dark',
             year: 1992,
             price: 1500,
             available: true,
-            image: Passat,
+            image: require('./images/passatb2.jpg'),
         },
         {
             id: 2,
             name: 'Polo amg',
-            color: "bright",
+            color: 'bright',
             year: 2000,
             price: 800,
             available: false,
-            image: Polo
+            image: require('./images/polo.jpg'),
         },
         {
             id: 3,
             name: 'Audi Alien',
-            color: "normal",
+            color: 'normal',
             year: 2055,
             price: 15000,
             available: true,
-            image: Alien
+            image: require('./images/alien.jpg'),
         },
         {
             id: 4,
             name: 'Big Foot на город',
-            color: "dark",
+            color: 'dark',
             year: 2005,
             price: 10000,
             available: false,
-            image: BigFoot
+            image: require('./images/bigfoot.jpg'),
         },
         {
             id: 5,
             name: 'Легенькі підфарбування',
-            color: "dark",
+            color: 'dark',
             year: 2014,
             price: 6000,
             available: true,
-            image: Junk
+            image: require('./images/junk.jpg'),
         },
         {
             id: 6,
             name: 'газ + бензин',
-            color: "bright",
+            color: 'bright',
             year: 2023,
             price: 100,
             available: true,
-            image: Tesla
+            image: require('./images/tesla.jpg'),
         },
         {
             id: 7,
             name: 'Toyota Supra MK4',
-            color: "classic",
+            color: 'classic',
             year: 1998,
             price: 13999,
             available: true,
-            image: Supra
+            image: require('./images/supra.jpg'),
         },
         {
             id: 8,
             name: 'Honda Civic Type R',
-            color: "bright",
+            color: 'bright',
             year: 2019,
             price: 1200,
             available: true,
-            image: Civic
+            image: require('./images/civic.jpg'),
         },
         {
             id: 9,
             name: 'BMW M3 E30',
-            color: "classic",
+            color: 'classic',
             year: 1990,
             price: 15001,
             available: false,
-            image: M3
+            image: require('./images/e30.jpeg'),
         },
         {
             id: 10,
             name: 'Mercedes G-Wagon',
-            color: "dark",
+            color: 'dark',
             year: 2001,
             price: 13333,
             available: true,
-            image: GWagon
+            image: require('./images/gclass.jpg'),
         },
         {
             id: 11,
             name: 'Chevrolet Camaro',
-            color: "bright",
+            color: 'bright',
             year: 2010,
             price: 1100,
             available: true,
-            image: Camaro
+            image: require('./images/camaro.jpg'),
         },
         {
             id: 12,
             name: 'Ford Mustang GT',
-            color: "bright",
+            color: 'bright',
             year: 2015,
             price: 9770,
             available: true,
-            image: Mustang
+            image: require('./images/gt5.jfif'),
         },
         {
             id: 13,
             name: 'Nissan Skyline GT-R',
-            color: "dark",
+            color: 'dark',
             year: 1999,
             price: 16579,
             available: false,
-            image: Skyline
+            image: require('./images/r34.jpg'),
         },
         {
             id: 14,
             name: 'Porsche 911',
-            color: "classic",
+            color: 'classic',
             year: 1995,
             price: 14596,
             available: true,
-            image: Carrera
+            image: require('./images/930.jpg'),
         },
         {
             id: 15,
             name: 'Mazda RX-7',
-            color: "normal",
+            color: 'normal',
             year: 2002,
             price: 12345,
             available: true,
-            image: RX7
+            image: require('./images/rx7.jpeg'),
         },
         {
             id: 16,
             name: 'Subaru WRX',
-            color: "normal",
+            color: 'normal',
             year: 2010,
             price: 9500,
             available: true,
-            image: WRX
+            image: require('./images/wrx.jpg'),
         },
         {
             id: 17,
             name: 'Dodge Charger',
-            color: "dark",
+            color: 'dark',
             year: 2008,
             price: 8000,
             available: true,
-            image: Charger
+            image: require('./images/charger.jpg'),
         },
         {
             id: 18,
             name: 'Jaguar X-Type',
-            color: "classic",
+            color: 'classic',
             year: 2005,
             price: 7000,
             available: true,
-            image: XType
+            image: require('./images/xtype.jfif'),
         },
         {
             id: 19,
             name: 'Mazda Miata MX-5',
-            color: "bright",
+            color: 'bright',
             year: 2003,
             price: 5500,
             available: true,
-            image: Miata
+            image: require('./images/miata.jfif'),
         },
         {
             id: 20,
             name: 'Hyundai Genesis',
-            color: "normal",
+            color: 'normal',
             year: 2012,
             price: 14345,
             available: false,
-            image: Genesis
+            image: require('./images/hyundai.jfif'),
         },
         {
             id: 21,
             name: 'Дізільний бус',
-            color: "bright",
+            color: 'bright',
             year: 2011,
             price: 20000,
             available: true,
-            image: disiel
+            image: require('./images/disiel.jpg'),
         }
+
     ]);
 
 
