@@ -10,7 +10,7 @@
 .item-image {
     width: 800px;
     border: 1px solid #ddd;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
 }
 
 .price {
@@ -39,8 +39,9 @@ h1 {
 
 .characteristics {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .characteristic {
@@ -49,6 +50,35 @@ h1 {
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.characteristic select {
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.characteristic select:focus {
+    outline: none;
+    border-color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.characteristic select option {
+    background-color: #fff;
+    color: #333;
+}
+
+.characteristic select:hover {
+    border-color: #555;
 }
 
 .countable-field {
@@ -57,11 +87,24 @@ h1 {
     padding-bottom: 15px;
 }
 
-.countable-field input{
+.countable-field input {
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd; /* Border added for consistency */
     border-radius: 5px;
     font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.countable-field input:focus {
+    outline: none;
+    border-color: #333; /* Border color change on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.countable-field input:hover {
+    border-color: #555; /* Darker border on hover */
 }
 
 .button-container {
@@ -83,7 +126,7 @@ button.add-to-cart-button {
     color: #fff;
 }
 
-button:hover {
+button.add-to-cart-button:hover {
     background-color: #555;
 }
 
