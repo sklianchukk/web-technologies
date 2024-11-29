@@ -12,27 +12,38 @@ const CheckoutPage = () => {
   const validationSchema = Yup.object({
     firstName: Yup.string()
       .required('First name is required')
-      .matches(/^[a-zA-Z]+$/, 'No special characters allowed')
+      .matches(/^[a-zA-Zа-яА-Яіїєґ]+$/, 'Only letters are allowed (including Ukrainian characters)')
       .max(30, 'First name must be at most 30 characters'),
 
     lastName: Yup.string()
       .required('Last name is required')
-      .matches(/^[a-zA-Z]+$/, 'No special characters or numbers allowed')
+      .matches(/^[a-zA-Zа-яА-Яіїєґ]+$/, 'Only letters are allowed (including Ukrainian characters)')
       .max(30, 'Last name must be at most 30 characters'),
+
     email: Yup.string()
       .email('Invalid email format')
+      .matches(
+        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
+        'Email must have a valid domain and end with exactly two characters after the dot'
+      )
       .required('Email is required'),
+
     phone: Yup.string()
       .matches(/^[0-9]+$/, 'Only numbers are allowed')
       .min(10, 'Phone number must be at least 10 digits')
       .required('Phone number is required'),
+
     address: Yup.string()
       .required('Address is required'),
   });
 
   const handleSubmit = (values) => {
     console.log('Form Submitted', values);
-    window.location.href = '/success';
+
+    // Clear the cart after successful submission
+    localStorage.removeItem('cart'); // Assuming cart is saved in localStorage
+
+    window.location.href = '/success'; // Redirect to the success page
   };
 
   return (

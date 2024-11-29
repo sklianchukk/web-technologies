@@ -5,7 +5,7 @@ import InputComponent from './inputComponents/inputComponents';
 import SelectComponent from './selectComponent/selectComponent';
 import SortButton from './sort/sort';
 import '../Catalog/Catalog.css';
-import Loader from '../Loader/loader';
+import Loader from '../loader/loader';
 
 const Catalog = () => {
   const [items, setItems] = useState([]);
