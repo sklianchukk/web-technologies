@@ -1,11 +1,11 @@
 # Web Technologies & Web Design — Lab Assignments
 
-## 👨‍🎓 Student: Sklianchuk Bohdan  
+## Student: Sklianchuk Bohdan  
 Group: ІР-22  
 Variant: 9
 
 
-## 📁 Description
+## Description
 
 This repository contains lab assignments for the course **Web Technologies and Web Design**.
 
@@ -14,7 +14,7 @@ Some labs may also include JavaScript.
 
 Each lab folder contains its own set of files — HTML, CSS, assets, etc.
 
-## 🧰 Technologies
+## Technologies
 
 - HTML5  
 - CSS3  
@@ -23,7 +23,7 @@ Each lab folder contains its own set of files — HTML, CSS, assets, etc.
 - Modern web development best practices
 
 
-## 🚀 Usage
+## Usage
 
 1. Clone the repository:
    ```bash
