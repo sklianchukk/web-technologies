@@ -1,20 +1,19 @@
-## Лабораторні роботи з дисципліни "Web-технології та Web-дизайн"
+# Web Technologies & Web Design — Lab Assignments
 
-## Виконав: Склянчук Богдан Миколайович (ІР-22)
-## Лабораторна робота №1 (Варіант 9)
+## Student: Sklianchuk Bohdan  
+Lab: 1  
+Variant: 9
 
-Description: Create a landing page following the given design (Figma).
-Requirements:
-● Use of semantic tags (header, nav, ul, footer, etc.)
-wherever is necessary   
-● All fonts, colour palette, elements sizes must strictly match the
-design.     
-● Pixel perfect is also not required, BUT your website should visually
-match the design template (i.e. If the element is horizontally centred
-on the design, it should look centred on the website)   
-● All class names must not be meaningless (i.e. class=”myClass”) and
-should follow the same naming convention, preferably BEM, but
-you could come up with your own (just be consistent)    
-● Basic cross-browser support (website should look correctly on last
-versions of modern browsers (Chrome, Safari, Edge)  
-● For now, responsiveness is not required.
+## Description  
+Create a landing page following the given design (Figma).
+
+## Requirements:
+
+- Use of semantic tags (`<header>`, `<nav>`, `<ul>`, `<footer>`, etc.) wherever necessary.  
+- All fonts, colour palette, and element sizes must strictly match the design.  
+- Pixel perfect is not required, BUT the website should visually match the design template (e.g., if an element is centered in the design, it should look centered on the page).  
+- All class names must not be meaningless (e.g., `class="myClass"`) and should follow a consistent naming convention (preferably BEM).  
+- Basic cross-browser support — the website should look correct in the latest versions of Chrome, Safari, and Edge.  
+- Responsiveness is **not required** for now.
+
+Link to figma - https://www.figma.com/file/XT2jhcwmHBGxAjIBJsMnH0/LabWork1-V9
