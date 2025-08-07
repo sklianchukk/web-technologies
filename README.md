@@ -1,20 +1,30 @@
-## Лабораторні роботи з дисципліни "Web-технології та Web-дизайн"
+# Web Technologies & Web Design — Lab Assignments
 
-## Виконав: Склянчук Богдан Миколайович (ІР-22)
-## Лабораторна робота №1 (Варіант 9)
+## 👨‍🎓 Student: Sklianchuk Bohdan  
+Group: ІР-22  
+Variant: 9
 
-Description: Create a landing page following the given design (Figma).
-Requirements:
-● Use of semantic tags (header, nav, ul, footer, etc.)
-wherever is necessary   
-● All fonts, colour palette, elements sizes must strictly match the
-design.     
-● Pixel perfect is also not required, BUT your website should visually
-match the design template (i.e. If the element is horizontally centred
-on the design, it should look centred on the website)   
-● All class names must not be meaningless (i.e. class=”myClass”) and
-should follow the same naming convention, preferably BEM, but
-you could come up with your own (just be consistent)    
-● Basic cross-browser support (website should look correctly on last
-versions of modern browsers (Chrome, Safari, Edge)  
-● For now, responsiveness is not required.
+
+## 📁 Description
+
+This repository contains lab assignments for the course **Web Technologies and Web Design**.
+
+All labs follow the given specifications and are built using HTML5 and CSS3.  
+Some labs may also include JavaScript.
+
+Each lab folder contains its own set of files — HTML, CSS, assets, etc.
+
+## 🧰 Technologies
+
+- HTML5  
+- CSS3  
+- JavaScript (in later labs)  
+- Figma (as design reference) 
+- Modern web development best practices
+
+
+## 🚀 Usage
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sklianchukk/web-technologies.git
