@@ -1,17 +1,27 @@
-### 4. CRUD Javascript App: Create/Edit Pages
-Description: In this work, you need to continue working and add two new 
-parts to your website - Create & Edit Pages (You can find the template of 
-these pages by following the link).
+# Web Technologies & Web Design — Lab Assignments
 
-Update/Delete operations are not required for this work!
-Also you must validate the forms using HTML attributes (inputs must be 
-configured for your data format).
+## Student: Sklianchuk Bohdan  
+Lab: 5  
+Variant: 9
 
-If incorrect data is entered in the inputs, you must use JavaScript to inform 
-the user with modal windows or just plain alert() function.
+## Description  
+In this lab, you must implement **full CRUD functionality** using a **backend REST API**.  
+All Create, Read, Update, and Delete operations must be performed via the corresponding **HTTP methods** (`POST`, `GET`, `PUT/PATCH`, `DELETE`).
 
-Bonus points are provided for this work, if you implement a styled modal 
-window that will work with JavaScript.
-### Requirements:
-### ● Responsiveness absolutely not required.
-### ● Styling is not important at all. Is up to you.
+You are expected to connect an **existing backend** you worked on during the previous academic year.  
+If such a backend is unavailable, you should create a new one using any technology stack (Node.js, Java, Python, etc.).
+
+## Requirements
+
+- Connect your frontend application to a working **REST API backend**.
+- Implement the following HTTP operations:
+  - `GET` — retrieve list or single item.
+  - `POST` — create a new item.
+  - `PUT` or `PATCH` — update existing item.
+  - `DELETE` — delete item.
+- You may use any backend stack (Node.js, Java, Spring Boot, Flask, Express, etc.).
+- Use **fetch()** or similar native JS methods for making HTTP requests.
+- **Responsiveness is NOT required.**
+- **Styling is optional** and fully up to you.
+
+
