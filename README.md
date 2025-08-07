@@ -1,17 +1,24 @@
-### 4. CRUD Javascript App: Create/Edit Pages
-Description: In this work, you need to continue working and add two new 
-parts to your website - Create & Edit Pages (You can find the template of 
-these pages by following the link).
+# Web Technologies & Web Design — Lab Assignments
 
-Update/Delete operations are not required for this work!
-Also you must validate the forms using HTML attributes (inputs must be 
-configured for your data format).
+## Student: Sklianchuk Bohdan  
+Lab: 4  
+Variant: 9
 
-If incorrect data is entered in the inputs, you must use JavaScript to inform 
-the user with modal windows or just plain alert() function.
+## Description  
+In this lab, you need to extend your website by adding two new pages: **Create Page** and **Edit Page**. These pages are based on the following wireframe template:  
+🔗 [Mockflow Template (CRUD JS App)](https://wireframepro.mockflow.com/view/lviv-iot-crud-js-app)
 
-Bonus points are provided for this work, if you implement a styled modal 
-window that will work with JavaScript.
-### Requirements:
-### ● Responsiveness absolutely not required.
-### ● Styling is not important at all. Is up to you.
+The goal is to provide functionality to add new data items and edit existing ones using **HTML forms** and **JavaScript**.  
+**Update/Delete operations are not required.**
+
+## Requirements
+
+- Add a **Create Page** that allows users to add new items using a form.
+- Add an **Edit Page** that allows users to edit existing data items (e.g., via URL parameter or selection).
+- Use native **HTML form validation** attributes (`required`, `type`, `min`, `maxlength`, etc.).
+- If invalid data is entered, use **JavaScript** to notify the user via:
+  - `alert()` function **or**
+  - a **custom modal window** (bonus points if implemented).
+- **Responsiveness is NOT required.**
+- **Styling is optional** and fully up to you.
+
